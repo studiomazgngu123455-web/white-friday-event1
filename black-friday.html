@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
@@ -127,31 +127,47 @@
         
         .agents {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
             margin-top: 20px;
         }
         
         .agent {
             text-align: center;
             background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-            flex: 1;
-            min-width: 150px;
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 200px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
         }
         
         .agent-name {
             font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: #ffd700;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            font-family: 'Tajawal', sans-serif;
         }
         
         .agent-id {
-            font-size: 0.9rem;
-            opacity: 0.8;
+            font-size: 1rem;
+            opacity: 0.9;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        
+        .agent-number {
+            font-size: 1.1rem;
+            color: #ffffff;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            border: 1px solid rgba(255, 215, 0, 0.5);
         }
         
         .price {
@@ -259,14 +275,24 @@
             .section {
                 padding: 20px 15px;
             }
+            
+            .agents {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .agent {
+                min-width: auto;
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="stamp">
-                <div class="stamp-text">عرض<br>حصري</div>
+                <div class="stamp-text">مخطوطة<br>رسمياً</div>
             </div>
             <div class="logo">TopVoice</div>
             <h1 class="event-title">حدث الجمعة البيضاء</h1>
@@ -275,58 +301,21 @@
         <div class="section">
             <h2 class="section-title"><i class="fas fa-shipping-fast"></i> تفاصيل الشحن</h2>
             <p>الشحن من خلال وكالات الشحن المعتمدون من TopVoice ☑️</p>
-            <p>هاذي الوكالات الخاصه بسحب الرواتب والشحن معتمدون في السحب وتسليم لكل  البلاد 🌏</p>
-            <div style="text-align: center; margin-top: 30px; padding-bottom: 30px; border-bottom: 1px dashed #ccc;">
-    <h3 style="gold: #333; margin-bottom: 25px;">وكالات الشحن الرسمية:</h3>
-    
-    <div style="display: inline-block; margin: 0 15px; vertical-align: top;">
-        <h4 style="color: #007bff; margin-bottom: 8px;">لارين</h4>
-        <a 
-            href="https://wa.me/201016739409?text=مرحباً%20لارين،%20أريد%20الاستفسار%20عن%20عروض%20الجمعة%20البيضاء." 
-            target="_blank" 
-            style="
-                display: block;
-                padding: 10px 20px;
-                background-color: #075E54;
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                font-weight: bold;
-                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-            "
-        >
-            تواصل واتساب
-        </a>
-    </div>
-
-    <div style="display: inline-block; margin: 0 15px; vertical-align: top;">
-        <h4 style="color: #dc3545; margin-bottom: 8px;">الجرحي</h4>
-        <a 
-            href="https://wa.me/966532126333?text=مرحباً%20الجرحي،%20أريد%20الاستفسار%20عن%20عروض%20الجمعة%20البيضاء." 
-            target="_blank" 
-            style="
-                display: block;
-                padding: 10px 20px;
-                background-color: #075E54;
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                font-weight: bold;
-                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-            "
-        >
-            تواصل واتساب
-        </a>
-    </div>
-</div>
+            <p>هاذي الوكالات الخاصه بسحب الرواتب والشحن معتمدون في السحب وتسليم لا من البلاد 🌏</p>
+            
             <div class="agents">
+                <!-- الجارحي أولاً -->
                 <div class="agent">
                     <div class="agent-name">MR-Al-Jarhi</div>
                     <div class="agent-id">ID_1</div>
+                    <div class="agent-number">01208880287</div>
                 </div>
+                
+                <!-- لارين ثانياً -->
                 <div class="agent">
                     <div class="agent-name">M_Larin</div>
                     <div class="agent-id">ID_44</div>
+                    <div class="agent-number">+20 15 56864346</div>
                 </div>
             </div>
         </div>
@@ -343,12 +332,12 @@
                 <div class="payment-method"><i class="fas fa-mobile-alt"></i> Vodafone Cash💵💲</div>
                 <div class="payment-method"><i class="fas fa-bolt"></i> Insta Pay 💵💲</div>
             </div>
-            <p>يوجد تحويلات لجميع بلاد العالم 🌏</p>
+            <p>يوجد تحويلات لاجميع بلاد العالم 🌏</p>
         </div>
         
         <div class="highlight">
             <h2 class="highlight-title">🤔 بجد مش هزار 🤔</h2>
-            <p class="black">🔥 توب ڤويس هيولعها نار 🔥</p>
+            <p class="fire">🔥 توب ڤويس هيولعها نار 🔥</p>
         </div>
         
         <div class="section">
@@ -373,7 +362,7 @@
             </div>
             
             <p>مكافآت علي الشحن التراكمي لا تنتهي تعالي الحق</p>
-            <p class="fire" style="white: center; margin: 15px 0;">الدمار TopVoice مولعها نار 🔥</p>
+            <p class="fire" style="text-align: center; margin: 15px 0;">الدمار TopVoice مولعها نار 🔥</p>
         </div>
         
         <div class="section">
@@ -388,7 +377,10 @@
         
         <div class="cta">
             <p>فقط 🪙 تواصل معي</p>
-            <a href="#" class="cta-button">تواصل الآن</a>
+            <a href="https://wa.me/201208880287" class="cta-button">تواصل مع الجارحي</a>
+            <a href="https://wa.me/201556864346" class="cta-button" style="background: linear-gradient(to right, #25D366, #128C7E); margin-right: 10px;">
+                تواصل مع لارين
+            </a>
         </div>
         
         <footer>
