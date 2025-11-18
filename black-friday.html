@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حدث الجمعة البيضاء - TopVoice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stamp {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            height: 120px;
+            border: 4px dashed #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-15deg);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .stamp-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #ffd700;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .event-title {
+            font-size: 2.2rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            background: linear-gradient(to right, #ffffff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            font-size: 1.3rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature i {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        
+        .agents {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .agent {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .agent-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #ffd700;
+        }
+        
+        .agent-id {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .payment-method {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #ff8a00, #e52e71);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlight-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, #ff8a00, #e52e71);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .fire {
+            color: #ff4500;
+            text-shadow: 0 0 10px #ff8c00;
+            animation: flicker 1.5s infinite alternate;
+        }
+        
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        @media (max-width: 600px) {
+            .event-title {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .stamp {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                margin: 0 auto 20px;
+                top: 0;
+                left: 0;
+            }
+            
+            .section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="stamp">
+                <div class="stamp-text">عرض<br>حصري</div>
+            </div>
+            <div class="logo">TopVoice</div>
+            <h1 class="event-title">حدث الجمعة البيضاء</h1>
+        </header>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-shipping-fast"></i> تفاصيل الشحن</h2>
+            <p>الشحن من خلال وكالات الشحن المعتمدون من TopVoice ☑️</p>
+            <p>هاذي الوكالات الخاصه بسحب الرواتب والشحن معتمدون في السحب وتسليم لا من البلاد 🌏</p>
+            
+            <div class="agents">
+                <div class="agent">
+                    <div class="agent-name">MR-Al-Jarhi</div>
+                    <div class="agent-id">ID_1</div>
+                </div>
+                <div class="agent">
+                    <div class="agent-name">M_Larin</div>
+                    <div class="agent-id">ID_44</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-dollar-sign"></i> سعر الصرف</h2>
+            <div class="price">سعر كل 1 دولار 💲<br>من ☺️ 45 إلى 47</div>
+            <p>حسب السعر المتعارف عليه او طريقة التحويل</p>
+            
+            <h3 class="section-title"><i class="fas fa-exchange-alt"></i> طرق التحويل</h3>
+            <div class="payment-methods">
+                <div class="payment-method"><i class="fas fa-university"></i> بنك 🏦💵💲</div>
+                <div class="payment-method"><i class="fas fa-coins"></i> USDT💵💲</div>
+                <div class="payment-method"><i class="fas fa-mobile-alt"></i> Vodafone Cash💵💲</div>
+                <div class="payment-method"><i class="fas fa-bolt"></i> Insta Pay 💵💲</div>
+            </div>
+            <p>يوجد تحويلات لاجميع بلاد العالم 🌏</p>
+        </div>
+        
+        <div class="highlight">
+            <h2 class="highlight-title">🤔 بجد مش هزار 🤔</h2>
+            <p class="fire">🔥 توب ڤويس هيولعها نار 🔥</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-gift"></i> مفاجآت الجمعة البيضاء</h2>
+            
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>كاش باك</h3>
+                    <p>على الشحن التراكمي الأسبوعي</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <h3>مكافآت لا تنتهي</h3>
+                    <p>من TopVoice</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-surprise"></i>
+                    <h3>مفاجآت كثيرة</h3>
+                    <p>يوم الجمعة من كل أسبوع</p>
+                </div>
+            </div>
+            
+            <p>مكافآت علي الشحن التراكمي لا تنتهي تعالي الحق</p>
+            <p class="fire" style="text-align: center; margin: 15px 0;">الدمار TopVoice مولعها نار 🔥</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-users"></i> تحت رعاية</h2>
+            <p>الإدارة الرسمية TopVoice</p>
+            <p>والوكيل الجارحي معرف رقم _1</p>
+            <p>والوكيلة لارين معرف رقم _44</p>
+            
+            <p style="margin-top: 20px; text-align: center;">نشكركم على تواجدكم معنا ونتمنى المزيد من النجاح معنا في TopVoice</p>
+            <p style="text-align: center;">دمتم معنا عائلة 🤍</p>
+        </div>
+        
+        <div class="cta">
+            <p>فقط 🪙 تواصل معي</p>
+            <a href="#" class="cta-button">تواصل الآن</a>
+        </div>
+        
+        <footer>
+            <p>TopVoice &copy; 2023 - جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+
+    <script>
+        // تأثيرات بسيطة للصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.feature');
+            
+            features.forEach(feature => {
+                feature.addEventListener('mouseenter', function() {
+                    this.style.background = 'rgba(255, 215, 0, 0.2)';
+                });
+                
+                feature.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(255, 255, 255, 0.15)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
