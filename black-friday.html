@@ -23,7 +23,7 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -35,7 +35,7 @@
         }
         
         .logo {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -69,7 +69,7 @@
         }
         
         .event-title {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin: 20px 0;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
             background: linear-gradient(to right, #ffffff, #ffd700);
@@ -88,63 +88,92 @@
         }
         
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             margin-bottom: 15px;
             color: #ffd700;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
         }
         
         .section-title i {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
         
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            gap: 20px;
             margin-top: 20px;
         }
         
         .feature {
             background: rgba(255, 255, 255, 0.15);
-            padding: 15px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
         .feature:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
         .feature i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #ffd700;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            font-size: 1.4rem;
             margin-bottom: 10px;
+            color: #ffd700;
         }
         
         .agents {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 25px;
             margin-top: 20px;
         }
         
         .agent {
             text-align: center;
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            min-width: 200px;
-            border: 2px solid rgba(255, 215, 0, 0.3);
+            padding: 25px 20px;
+            border-radius: 20px;
+            width: 260px;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .agent:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: rgba(255, 215, 0, 0.7);
+        }
+        
+        .agent-icon {
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 15px;
+            background: rgba(255, 215, 0, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
         }
         
         .agent-name {
             font-weight: bold;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 8px;
             background: linear-gradient(135deg, #FFD700, #FFA500);
             -webkit-background-clip: text;
@@ -154,10 +183,11 @@
         }
         
         .agent-id {
-            font-size: 1rem;
+            font-size: 1.1rem;
             opacity: 0.9;
             color: #ffd700;
             margin-bottom: 10px;
+            font-weight: bold;
         }
         
         .agent-number {
@@ -174,22 +204,24 @@
             display: inline-block;
             background: #25D366;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 15px;
             transition: all 0.3s;
             border: 2px solid #25D366;
+            font-size: 1.1rem;
         }
         
         .whatsapp-btn:hover {
             background: #128C7E;
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .price {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             text-align: center;
             margin: 20px 0;
@@ -207,16 +239,23 @@
         
         .payment-method {
             background: rgba(255, 255, 255, 0.15);
-            padding: 10px 15px;
+            padding: 12px 18px;
             border-radius: 20px;
             display: flex;
             align-items: center;
             gap: 8px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .payment-method:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
         }
         
         .highlight {
             background: linear-gradient(135deg, #ff8a00, #e52e71);
-            padding: 20px;
+            padding: 25px;
             border-radius: 15px;
             text-align: center;
             margin: 25px 0;
@@ -224,7 +263,7 @@
         }
         
         .highlight-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 10px;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
@@ -245,7 +284,8 @@
             font-size: 1.2rem;
             transition: all 0.3s;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            margin: 5px;
+            margin: 8px;
+            border: none;
         }
         
         .cta-button:hover {
@@ -266,6 +306,47 @@
             color: #ff4500;
             text-shadow: 0 0 10px #ff8c00;
             animation: flicker 1.5s infinite alternate;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .coins-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 25px 0;
+            gap: 20px;
+        }
+        
+        .coin {
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle at 30% 30%, #ffd700, #daa520);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .coin:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .coin:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        .coin i {
+            color: #8b6914;
+            font-size: 1.8rem;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         
         @keyframes flicker {
@@ -273,13 +354,13 @@
             50% { opacity: 0.8; }
         }
         
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .event-title {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
             .logo {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .stamp {
@@ -297,11 +378,17 @@
             
             .agents {
                 flex-direction: column;
+                align-items: center;
                 gap: 20px;
             }
             
             .agent {
-                min-width: auto;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .coins-section {
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -318,51 +405,72 @@
         </header>
         
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-shipping-fast"></i> تفاصيل الشحن</h2>
-            <p>الشحن من خلال وكالات الشحن المعتمدون من TopVoice ☑️</p>
-            <p>تلك هي الوكالات الخاصه بسحب الرواتب والشحن معتمدون في السحب وتسليم لكل البلاد 🌏</p>
+            <h2 class="section-title"><i class="fas fa-coins"></i> شحن الكوينزات</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 15px;">احصل على أفضل العروض الحصرية لشحن الكوينزات في تطبيق TopVoice</p>
+            <p style="text-align: center;">استمتع بأقوى العروض والخصومات الحصرية خلال حدث الجمعة البيضاء! 🎉</p>
+            
+            <!-- إضافة عناصر زخرفية للعملات -->
+            <div class="coins-section">
+                <div class="coin"><i class="fas fa-coins"></i></div>
+                <div class="coin"><i class="fas fa-gem"></i></div>
+                <div class="coin"><i class="fas fa-award"></i></div>
+            </div>
             
             <div class="agents">
                 <!-- الجارحي أولاً -->
                 <div class="agent">
+                    <div class="agent-icon"><i class="fas fa-crown"></i></div>
                     <div class="agent-name">MR-Al-Jarhi</div>
                     <div class="agent-id">ID_33</div>
                     <div class="agent-number">+966 53 212 6333</div>
-                    <a href="https://wa.me/966532126333" class="whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> اضغط هنا للتواصل
+                    <a href="https://wa.me/966532126333?text=السلام%20عليكم%20%0Aالوكيل%20الجارحي%20للشحن%20والسحب%20%0Aعندي%20استفسار%20بخصوص%20عروض%20الجمعة%20البيضاء" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> تواصل مع الجارحي
                     </a>
                 </div>
                 
                 <!-- لارين ثانياً -->
                 <div class="agent">
+                    <div class="agent-icon"><i class="fas fa-star"></i></div>
                     <div class="agent-name">M_Larin</div>
                     <div class="agent-id">ID_44</div>
                     <div class="agent-number">+20 10 16739409</div>
-                    <a href="https://wa.me/201016739409" class="whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> اضغط هنا للتواصل
+                    <a href="https://wa.me/201016739409?text=السلام%20عليكم%20%0Aالوكيلة%20لارين%20للشحن%20والسحب%20%0Aعندي%20استفسار%20بخصوص%20عروض%20الجمعة%20البيضاء" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> تواصل مع لارين
+                    </a>
+                </div>
+                
+                <!-- GINEVRA المضافة -->
+                <div class="agent">
+                    <div class="agent-icon"><i class="fas fa-gem"></i></div>
+                    <div class="agent-name">GINEVRA</div>
+                    <div class="agent-id">ID_1112</div>
+                    <div class="agent-number">+20 10 07635953</div>
+                    <a href="https://wa.me/201007635953?text=السلام%20عليكم%20%0Aالوكيلة%20GINEVRA%20للشحن%20والسحب%20%0Aعندي%20استفسار%20بخصوص%20عروض%20الجمعة%20البيضاء" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> تواصل مع GINEVRA
                     </a>
                 </div>
             </div>
         </div>
         
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-dollar-sign"></i> سعر الصرف</h2>
+            <h2 class="section-title"><i class="fas fa-dollar-sign"></i> سعر الصرف الحصري</h2>
             <div class="price">سعر كل 1 دولار 💲<br>من ☺️ 45 إلى 47</div>
-            <p>حسب السعر المتعارف عليه او طريقة التحويل</p>
+            <p style="text-align: center; font-size: 1.1rem;">أفضل سعر صرف حصري خلال حدث الجمعة البيضاء! 🎊</p>
             
-            <h3 class="section-title"><i class="fas fa-exchange-alt"></i> طرق التحويل</h3>
+            <h3 class="section-title"><i class="fas fa-exchange-alt"></i> طرق التحويل المتاحة</h3>
             <div class="payment-methods">
                 <div class="payment-method"><i class="fas fa-university"></i> بنك 🏦💵💲</div>
                 <div class="payment-method"><i class="fas fa-coins"></i> USDT💵💲</div>
                 <div class="payment-method"><i class="fas fa-mobile-alt"></i> Vodafone Cash💵💲</div>
                 <div class="payment-method"><i class="fas fa-bolt"></i> Insta Pay 💵💲</div>
             </div>
-            <p>يوجد تحويلات لجميع بلاد العالم 🌏</p>
+            <p style="text-align: center; margin-top: 15px;">يوجد تحويلات لجميع بلاد العالم 🌏</p>
         </div>
         
         <div class="highlight">
             <h2 class="highlight-title">🤔 بجد مش هزار 🤔</h2>
-            <p class="fire">🔥 توب ڤويس هيولعها نار 🔥</p>
+            <p class="gold">🔥 توب ڤويس هيولعها نار في الجمعة البيضاء 🔥</p>
+            <p style="margin-top: 15px; font-size: 1.1rem;">عروض لن تتكرر! استفد من أقوى العروض على شحن الكوينزات!</p>
         </div>
         
         <div class="section">
@@ -371,42 +479,57 @@
             <div class="features">
                 <div class="feature">
                     <i class="fas fa-money-bill-wave"></i>
-                    <h3>كاش باك</h3>
-                    <p>على الشحن التراكمي الأسبوعي</p>
+                    <h3>كاش باك حصري</h3>
+                    <p>احصل على كاش باك من 1% وحتي 3% على الشحن التراكمي الأسبوعي</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-award"></i>
-                    <h3>مكافآت لا تنتهي</h3>
-                    <p>من TopVoice</p>
+                    <h3>مكافآت ضخمة</h3>
+                    <p>مكافآت وعروض خاصة من TopVoice لا تنتهي</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-surprise"></i>
-                    <h3>مفاجآت كثيرة</h3>
-                    <p>يوم الجمعة من كل أسبوع</p>
+                    <h3>مفاجآت أسبوعية</h3>
+                    <p>عروض ومفاجآت جديدة كل يوم جمعة</p>
                 </div>
             </div>
             
-            <p>مكافآت علي الشحن التراكمي لا تنتهي تعالي الحق</p>
-            <p class="fire" style="text-align: center; margin: 15px 0;">الدمار TopVoice مولعها نار 🔥</p>
+            <p style="text-align: center; margin-top: 20px; font-size: 1.2rem;">مكافآت على الشحن التراكمي لا تنتهي! تعالي واشتري بأفضل الأسعار! 💰</p>
+            <p class="gold" style="text-align: center; margin: 15px 0; font-size: 1.3rem;">الدمار TopVoice مولعها نار في الجمعة البيضاء! 🔥</p>
         </div>
         
         <div class="section">
             <h2 class="section-title"><i class="fas fa-users"></i> تحت رعاية</h2>
-            <p>الإدارة الرسمية TopVoice</p>
-            <p>والوكيل الجارحي معرف رقم _33</p>
-            <p>والوكيلة لارين معرف رقم _44</p>
+            <p style="text-align: center; font-size: 1.2rem;">الإدارة الرسمية TopVoice</p>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+                <div style="text-align: center;">
+                    <p>الوكيل الجارحي</p>
+                    <p style="color: #ffd700;">معرف رقم _33</p>
+                </div>
+                <div style="text-align: center;">
+                    <p>الوكيلة لارين</p>
+                    <p style="color: #ffd700;">معرف رقم _44</p>
+                </div>
+                <div style="text-align: center;">
+                    <p>الوكيلة GINEVRA</p>
+                    <p style="color: #ffd700;">معرف رقم _1112</p>
+                </div>
+            </div>
             
-            <p style="margin-top: 20px; text-align: center;">نشكركم على تواجدكم معنا ونتمنى المزيد من النجاح معنا في TopVoice</p>
-            <p style="text-align: center;">دمتم معنا عائلة 🤍</p>
+            <p style="margin-top: 20px; text-align: center; font-size: 1.1rem;">نشكركم على تواجدكم معنا ونتمنى لكم المزيد من النجاح مع TopVoice</p>
+            <p style="text-align: center; font-size: 1.1rem;">دمتم معنا عائلة واحدة 🤍</p>
         </div>
         
         <div class="cta">
-            <p>فقط 🪙 تواصل معنا</p>
-            <a href="https://wa.me/966532126333" class="cta-button">
+            <p style="font-size: 1.3rem; margin-bottom: 20px;">فقط 🪙 تواصل معنا الآن!</p>
+            <a href="https://wa.me/966532126333?text=السلام%20عليكم%20%0Aالوكيل%20الجارحي%20للشحن%20والسحب%20%0Aعندي%20استفسار%20بخصوص%20عروض%20الجمعة%20البيضاء" class="cta-button">
                 <i class="fab fa-whatsapp"></i> تواصل مع الجارحي
             </a>
-            <a href="https://wa.me/201016739409" class="cta-button" style="background: linear-gradient(to right, #25D366, #128C7E);">
+            <a href="https://wa.me/201016739409?text=السلام%20عليكم%20%0Aالوكيلة%20لارين%20للشحن%20والسحب%20%0Aعندي%20استفسار%20بخصوص%20عروض%20الجمعة%20البيضاء" class="cta-button" style="background: linear-gradient(to right, #25D366, #128C7E);">
                 <i class="fab fa-whatsapp"></i> تواصل مع لارين
+            </a>
+            <a href="https://wa.me/201007635953?text=السلام%20عليكم%20%0Aالوكيلة%20GINEVRA%20للشحن%20والسحب%20%0Aعندي%20استفسار%20بخصوص%20عروض%20الجمعة%20البيضاء" class="cta-button" style="background: linear-gradient(to right, #8A2BE2, #4B0082);">
+                <i class="fab fa-whatsapp"></i> تواصل مع GINEVRA
             </a>
         </div>
         
@@ -433,6 +556,3 @@
     </script>
 </body>
 </html>
-
-
-
